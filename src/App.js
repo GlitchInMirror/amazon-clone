@@ -7,7 +7,6 @@ import Login from './Components/Login'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {useStateValue} from './Components/StateProvider'
 import {auth} from "./Components/firebase"
-import Payment from "./Components/Payment"
 import {loadStripe} from "@stripe/stripe-js";
 import {Elements} from "@stripe/react-stripe-js";
 
@@ -52,13 +51,7 @@ function App() {
             <Header />
             <Checkout />
           </Route>
-          <Route path="/payment">
-
-              <Header />
-              <Elements stripe={promise}>
-                <Payment />
-            </Elements>
-          </Route>
+         
           <Route path="/">
             <Header />
             <Home />
